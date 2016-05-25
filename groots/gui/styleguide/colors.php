@@ -1,0 +1,10 @@
+<h3 class="gui-item__subtitle">Brand Colors</h3>
+<div class="cs-brand-primary"></div>
+<div class="cs-brand-secondary"></div>
+<div class="cs-brand-white"></div>
+<h3 class="gui-item__subtitle">Greys</h3>
+<div class="cs-greys-xdark"></div>
+<div class="cs-greys-dark"></div>
+<div class="cs-greys-base"></div>
+<div class="cs-greys-light"></div>
+<div class="cs-greys-xlight"></div>

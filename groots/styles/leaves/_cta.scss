@@ -1,0 +1,55 @@
+.cta-read-more {
+    @include clearfix;
+
+    display: block;
+    max-width: 320px;
+    padding: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    color: color(brand, secondary);
+    background-color: color(brand, primary);
+
+    @include mq(md) {
+        margin-right: 0;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        @include mq(md) {
+            width: 50%;
+            float: left;
+            padding-right: 1em;
+        }
+    }
+
+    .cta-read-more__content {
+        margin-top: 1em;
+
+        @include mq(md) {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    .cta-read-more__title {
+        margin: 0;
+        font-size: em(20px);
+        line-height: 1.1;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .cta-read-more__link {
+        display: block;
+        margin-top: 1.2em;
+        font-size: em(14px);
+    }
+
+    svg {
+        width: 13px;
+        height: 13px;
+    }
+}

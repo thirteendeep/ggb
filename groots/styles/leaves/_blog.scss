@@ -1,0 +1,26 @@
+.blog-listing-element {
+    display: block;
+    color: color(brand, secondary);
+    margin-bottom: $grid-gutter-width;
+
+    @include mq(lg) {
+        &:hover .btn--primary {
+            transform: scale(1.05);
+        }
+    }
+
+    .blog-listing-element__media {
+        img {
+            width: 100%;
+        }
+    }
+
+    .blog-listing-element__title {
+        margin: 1.3em 0;
+        font-size: em(20px);
+        line-height: 1.1;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}

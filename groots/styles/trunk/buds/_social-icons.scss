@@ -1,0 +1,68 @@
+
+// @each $icon, $unicode in $icons {
+
+//     .fa-#{$icon} {
+//         &:before {
+//             @include fa-icon();
+//             content: $fa-var-#{$icon};
+//             //content: map-get($icons, char);
+//         }
+//     }
+// }
+
+%social-icons {
+    a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: $color-secondary;
+        transition: transform $transition-fast ease-in-out;
+
+        &:before {
+            font-family: FontAwesome;
+            line-height: inherit;
+            font-size: 1em;
+        }
+
+        @include mq(lg) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        @each $social, $icon in $socials {
+            &[social*='#{$social}'] {
+                background-color: $color-primary;
+
+                &:before {
+                    content: map-get($icon, char);
+                }
+            }
+        }
+    }
+}
+
+.social-icons--link {
+    @extend %social-icons;
+
+    a span {
+        @extend %sr-only;
+    }
+}
+
+.social-icons--share {
+    @extend %social-icons;
+
+    > span {
+        @extend %h-h5;
+        font-weight: 500;
+        padding-right: 1em;
+    }
+
+    > * {
+        vertical-align: middle;
+    }
+}

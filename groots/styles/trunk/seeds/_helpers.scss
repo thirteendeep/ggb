@@ -1,0 +1,108 @@
+// ==========================================================================
+// Helpers
+// ==========================================================================
+
+%clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+%sr-only {
+    display: none;
+}
+
+%inline-list {
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+}
+
+%caret-down-64 {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAdElEQVQ4T62S0Q2AIAxEj4lcxRFkMh3BVZxIcxAIKkVp6SfkvRzlHIzjjDyGCGYAkzLJwQSnEg4YBQuAVSnxaQcaiQewlUvskQQ4PaFM/0eS4ZqAZy3JDZYEkuQFtwRPSRX+EvCeJePs0jcPqbKyQxEzJ7gABdcQwAP2aP8AAAAASUVORK5CYII=');
+}
+
+%caret-up-64 {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAeklEQVQ4T7XSUQ2AIBRG4UMCjWIDZwOjWMUmNpAIRpEEurvJpsgdCoP38+3fLobCZwp7qgMTcACztlRb0AIr0F3hBgzAHkIxIIx9E0VCQItV5A6k4ijiga/xCxHgb/xABLBAn/mhrABymiYTcALIrcdMYKn+lZPDihecLyMYAHZD9GIAAAAASUVORK5CYII=');
+}
+
+%img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+%img-cover {
+    display: block;
+    width: 100%;
+
+    div,
+    span {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        &>img {
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+    }
+
+    &>img {
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    objectfit {
+       display: block;
+       width: 100%;
+       height: 100%;
+       background-size: cover;
+       background-position: center center;
+   }
+}
+
+%img-broken {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 1rem;
+    color: $root-color;
+
+    &:before,
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+
+    &:before {
+        background-color: $color-error;
+        z-index: 1;
+        min-height: 3rem;
+    }
+
+    &:after {
+        content: 'Broken Image';
+        z-index: 2;
+        padding: 1rem;
+
+    }
+}
