@@ -1,0 +1,18 @@
+body {
+    @include mq(md) {
+        overflow-y: hidden;
+    }
+}
+
+[class^='section__'] {
+    @extend %container;
+    padding-bottom: 2em;
+
+    @include mq(md) {
+        padding-bottom: 4em;
+    }
+}
+
+[class^='section-fluid'] {
+    @extend %container-fluid;
+}

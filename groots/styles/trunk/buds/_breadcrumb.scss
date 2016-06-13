@@ -1,0 +1,35 @@
+// ==========================================================================
+// Breadcrumb
+// ==========================================================================
+
+@mixin breadcrumb($class: '.breadcrumb', $separator: '/') {
+
+    #{$class} {
+        font-size: remy(14px);
+        list-style: none;
+        color: $color-secondary;
+        margin: $root-vgrid auto;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: $color-secondary !important;
+            }
+        }
+
+        li:not(:last-child) {
+            &:after {
+                content: $separator;
+                display: inline-block;
+                margin: 0 .2em;
+            }
+        }
+
+        li:last-child {
+            a {
+                cursor: default;
+            }
+        }
+    }
+}

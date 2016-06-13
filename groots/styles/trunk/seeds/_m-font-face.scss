@@ -1,0 +1,16 @@
+// ==========================================================================
+// Mixin Font-face
+// ==========================================================================
+
+//  @example scss - Usage
+//      @include font-face(fontName, #{$font__path}, bold);
+//      @include font-face(fontName, #{$font__path}, normal, italic);
+
+@mixin font-face ($font-family, $filename, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        src: url($filename + '.woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}

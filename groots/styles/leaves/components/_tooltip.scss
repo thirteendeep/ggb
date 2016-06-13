@@ -1,0 +1,25 @@
+.tooltip {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 3px;
+    margin-left: 1em;
+    font-size: em(14px);
+    color: $color-white;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    background-color: color(brand, secondary);
+    transition: transform $transition-fast ease-in-out;
+
+    &:before {
+        content: '?';
+    }
+
+    @include mq(lg) {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

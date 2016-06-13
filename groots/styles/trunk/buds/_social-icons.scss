@@ -1,0 +1,94 @@
+
+// @each $icon, $unicode in $icons {
+
+//     .fa-#{$icon} {
+//         &:before {
+//             @include fa-icon();
+//             content: $fa-var-#{$icon};
+//             //content: map-get($icons, char);
+//         }
+//     }
+// }
+
+%social-icons {
+    a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: $color-white;
+        transition: transform $transition-fast ease-in-out;
+
+        &:before {
+            font-family: FontAwesome;
+            line-height: inherit;
+            font-size: 1em;
+        }
+
+        @include mq(lg) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        @each $social, $icon in $socials {
+            &[social*='#{$social}'] {
+                background-color: $color-primary;
+
+                &:before {
+                    content: map-get($icon, char);
+                }
+            }
+        }
+    }
+}
+
+.social-icons--link {
+    @extend %social-icons;
+
+    a span {
+        @extend %sr-only;
+    }
+}
+
+.social-icons--share {
+    @extend %social-icons;
+
+    > span {
+        @extend %h-h5;
+        font-weight: 500;
+        padding-right: 1em;
+    }
+
+    > * {
+        vertical-align: middle;
+    }
+}
+
+
+[class~='addthis_sharing_toolbox'] {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+[class~='at-share-btn'] {
+    max-width: 30px !important;
+    max-height: 30px !important;
+
+    svg {
+        position: relative;
+        top: 4px;
+    }
+}
+
+[class~='at-share-btn'],
+[class~='at-icon-wrapper'] {
+    background-color: $color-primary !important;
+
+    path {
+        fill: $color-white;
+    }
+}

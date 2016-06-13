@@ -1,0 +1,23 @@
+%site-title {
+    @extend %h-h2;
+    font-weight: bold;
+    margin: .8em 0 .9em;
+    color: color(brand, primary);
+}
+
+.site-title {
+    @extend %site-title;
+}
+
+.site-title--heavy {
+    font-size: 3.125em;
+    line-height: 1;
+}
+
+
+.site-section-title {
+    @extend %h-h2;
+    margin: .8em 0 .9em;
+    font-weight: bold;
+    color: color(brand, secondary);
+}

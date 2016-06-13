@@ -1,0 +1,118 @@
+// ==========================================================================
+// Leaves
+// ==========================================================================
+
+@include grid('gr-grid', $grid-columns, $grid-gutter-width, $grid-container-width);
+@include form();
+@include form-input-text();
+@include form-radio();
+@include form-checkbox(25px);
+@include form-select();
+@include form-input-file();
+@include breadcrumb('.breadcrumb');
+
+@import '../fonts/googlefonts';
+
+@import 'components/components';
+@import 'layouts/layouts';
+
+
+.section__nos-services {
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    [gr-grid~="row--block"] {
+        margin: 0;
+    }
+
+    [gr-grid="block"] {
+        position: relative;
+        padding: .2em;
+    }
+
+    .services__title {
+        display: block;
+        max-width: 270px;
+        color: color(brand, white);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: em(20px);
+        position: absolute;
+        bottom: .6em;
+        left: .6em;
+    }
+}
+
+
+
+.section__accreditations {
+    @at-root .background__accreditations {
+        background-color: #e7e7e7;
+    }
+
+}
+
+.section__ecrivez-nous {
+
+
+    padding-top: 1em;
+
+    @include mq(md) {
+        padding-top: 2em;
+    }
+
+    [class*="title"] {
+        color: color(brand, white);
+    }
+
+    .icon-list {
+        list-style: none;
+
+        li {
+            margin-bottom: 2em;
+        }
+
+        i {
+            font-style: normal;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background-color: $color-white;
+            color: $color-black;
+            text-align: center;
+            line-height: 80px;
+            font-size: em(30px);
+            margin-right: .5em;
+        }
+
+        a {
+            color: $color-white;
+        }
+    }
+
+    @at-root .background__ecrivez-nous {
+        background-color: #581316;
+    }
+}
+
+
+.section__accreditations {
+    padding-top: 1em;
+
+    @include mq(md) {
+        padding-top: 2em;
+    }
+
+    img {
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+}
+
+
+.section__footer {
+    padding-bottom: 0;
+}

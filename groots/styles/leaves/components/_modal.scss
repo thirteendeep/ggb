@@ -1,0 +1,99 @@
+[id^='modal'] {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto;
+    background: $color-white;
+
+    .mfp-close {
+        position: absolute;
+        z-index: 2;
+        top: -5px;
+        right: -5px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: $color-white;
+        text-align: center;
+        line-height: 20px;
+        background-color: color(brand, secondary);
+        opacity: 1;
+        min-height: auto;
+        border-radius: 50%;
+        font-size: 20px;
+
+        @include mq(sm) {
+            top: -10px;
+            right: -10px;
+        }
+    }
+
+    .modal__container {
+        @extend %container;
+        padding-top: $root-vgrid;
+    }
+
+    .site-subtitle {
+        margin-top: 0;
+    }
+}
+
+
+
+.mfp-zoom-in {
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all .2s ease-in-out;
+        transform: scale(.8);
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all .3s ease-out;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &.mfp-bg {
+            opacity: .8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: scale(.8);
+            opacity: 0;
+        }
+
+        &.mfp-bg {
+            opacity: 0;
+        }
+    }
+}
+
+.gallery [gr-grid='block'] {
+
+    @include mq(lg) {
+        a {
+            display: block;
+            overflow: hidden;
+        }
+
+        img {
+            transform: scale(1);
+            transition: transform $transition-fast ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

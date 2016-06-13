@@ -1,0 +1,172 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+// <nav gr-nav-effect="reveal-left" gr-nav-sticky="always" class="$nav-class">
+//     <div class="$nav-class__nav-icon" gr-nav-trigger><img src="" class="svg"></div>
+//     <a class="$nav-class__brand" href=""><img src="" alt="" /></a>
+//     <section class="$nav-class__panel" gr-nav-panel>
+//         <ul class="$nav-class__main">
+//             <li><a href="">...</a></li>
+//             ...
+//         </ul>
+//     </section>
+// </nav>
+
+// TODO : Sticky
+
+@mixin nav($nav-class: '.nav', $nav-height: 5rem, $nav-mobile-panel-width: 20rem, $nav-breakpoint: md) {
+
+    @if $nav-breakpoint {
+        @include nav-icon-svg('#{$nav-class}__nav-icon');
+        @if $nav-breakpoint!=always {
+            @include mq($nav-breakpoint) {
+                #{$nav-class}__nav-icon {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #{$nav-class} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        align-self: stretch;
+        align-items: center;
+        padding: 0 $grid-gutter-width;
+        height: $nav-height;
+        z-index: 21;
+
+        &[gr-nav-sticky='always'] {
+            position: fixed;
+        }
+    }
+
+    #{$nav-class}__panel {
+        position: fixed;
+        top: $nav-height;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: $nav-mobile-panel-width;
+        max-width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: transform $transition-fast map-get($easing, easeinsine);
+        overflow: visible;
+        overflow-y: auto;
+        z-index: 22;
+
+        ul {
+            list-style-type: none;
+        }
+
+        @if $nav-breakpoint and $nav-breakpoint!=always {
+            @include mq($nav-breakpoint) {
+                position: static;
+                transform: none;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: $nav-height;
+
+                ul {
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    [gr-nav-overlay] {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 19;
+        visibility: hidden;
+        background-color: transparent;
+        transition: background-color $transition-fast map-get($easing, easeinsine);
+
+        &.is-visible {
+            background-color: $black;
+            opacity: .5;
+            visibility: visible;
+        }
+    }
+
+
+    #{$nav-class}[gr-nav-effect='reveal-left'] {
+        #{$nav-class}__panel {
+            left: -$nav-mobile-panel-width;
+
+            &.is-open {
+                transform: translateX($nav-mobile-panel-width);
+            }
+        }
+    }
+
+    #{$nav-class}[gr-nav-effect='reveal-right'] {
+        #{$nav-class}__panel {
+            right: 0;
+            transform: translateX($nav-mobile-panel-width);
+
+            &.is-open {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    #{$nav-class}[gr-nav-effect='offset-left'] {
+        #{$nav-class}__panel {
+            left: -$nav-mobile-panel-width;
+
+            &.is-open {
+                transform: translateX($nav-mobile-panel-width);
+            }
+        }
+
+        &~* {
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform $transition-fast map-get($easing, easeinsine);
+        }
+
+        &.is-open~* {
+            transform: translateX($nav-mobile-panel-width);
+        }
+    }
+
+    #{$nav-class}[gr-nav-effect='offset-right'] {
+        #{$nav-class}__panel {
+            right: 0;
+            transform: translateX($nav-mobile-panel-width);
+
+            &.is-open {
+                transform: translateX(0);
+            }
+        }
+
+        &~* {
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform $transition-fast map-get($easing, easeinsine);
+        }
+
+        &.is-open~* {
+            transform: translateX(-$nav-mobile-panel-width);
+        }
+    }
+}

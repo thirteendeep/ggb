@@ -1,0 +1,112 @@
+@import 'buttons';
+@import 'modal';
+@import 'titles';
+@import 'pagination';
+@import 'tooltip';
+
+
+.slider-realisations {
+    width: 100%;
+    max-width: $grid-container-width;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    > div {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    img {
+        display: inline-block;
+        width: 100%;
+    }
+
+
+    .slick-slider {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slick-prev {
+        @include mq(sm) {
+            left: -40px;
+        }
+
+        @include mq(md) {
+            left: -50px;
+        }
+
+        &:before {
+            display: block;
+            transform: rotate(180deg);
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#{$color-secondary}" d="M19.4 21.7c-2.9-2.9-2.9-7.6 0-10.5l9-9c2.9-2.9 7.6-2.9 10.5 0l41.8 42.5c2.9 2.9 2.9 7.7 0 10.6L38.9 97.8c-2.9 2.9-7.6 2.9-10.5 0l-9-9c-2.9-2.9-2.9-7.6 0-10.5l23.1-23.1c2.9-2.9 2.9-7.6 0-10.5l-23.1-23z"></path></svg>');
+        }
+    }
+
+    .slick-next {
+        @include mq(sm) {
+            right: -40px;
+        }
+
+        @include mq(md) {
+            right: -50px;
+        }
+
+        &:before {
+            display: block;
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#{$color-secondary}" d="M19.4 21.7c-2.9-2.9-2.9-7.6 0-10.5l9-9c2.9-2.9 7.6-2.9 10.5 0l41.8 42.5c2.9 2.9 2.9 7.7 0 10.6L38.9 97.8c-2.9 2.9-7.6 2.9-10.5 0l-9-9c-2.9-2.9-2.9-7.6 0-10.5l23.1-23.1c2.9-2.9 2.9-7.6 0-10.5l-23.1-23z"></path></svg>');
+        }
+    }
+
+    .slick-dots {
+        bottom: -60px;
+    }
+
+    .slick-dots li {
+
+        &.slick-active button {
+            background-color: color(brand, primary);
+        }
+
+        button {
+            background-color: color(brand, secondary);
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+
+            &:before {
+                content: '';
+            }
+        }
+    }
+
+    .slider-title {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        z-index: 1;
+    }
+
+    .slick-slide {
+        position: relative;
+    }
+
+    [js-realisations-thumbs] {
+        .slick-slide {
+            padding: .2em;
+        }
+    }
+}
