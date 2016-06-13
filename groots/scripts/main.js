@@ -32,11 +32,16 @@ Parsley.setLocale('fr');
 
     "use strict";
 
-/*    $('[js-realisations]').slick({
-        dots: true
-    });
-*/
 
+    //
+    // $.ajax({
+    //     type: "POST",
+    //     url: "email.php",
+    //     data: $(form).serialize(),
+    //     success: function(){
+    //         $('.success').fadeIn(1000);
+    //     }
+    // });
 
 
     $('[js-realisations]').slick({
