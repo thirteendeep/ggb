@@ -13,6 +13,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/gui/gui.css" rel="preload">
     <link rel="stylesheet" href="/dist/css/groots.css" rel="preload">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Raleway:300,400,500,700,800" rel="stylesheet">
     <script src="https://use.fontawesome.com/ef899b4237.js"></script>
 
     <!-- Favicons -->

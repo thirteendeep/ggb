@@ -138,9 +138,11 @@
     }
 
     p {
+        font-size: em(20px);
         max-width: 1080px;
         margin-bottom: $root-vgrid;
         line-height: 1.4;
+        color: #858585;
     }
 
     a:not([class]) {

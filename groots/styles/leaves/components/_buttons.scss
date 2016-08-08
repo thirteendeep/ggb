@@ -1,10 +1,12 @@
 @include btn('.btn--primary, .btn--secondary, .btn--tertiary');
 
 %btn {
-    @include btn-size(em(14px), 10px, 30px, 0);
+    @include btn-size(em(18px), 10px, 30px, 0);
     text-transform: uppercase;
-    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
     white-space: nowrap;
+    letter-spacing: 1px;
     transition: transform $transition-fast ease-in-out,
     background-color $transition-fast ease-in-out;
 

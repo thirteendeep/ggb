@@ -43,6 +43,14 @@
             left: -50px;
         }
 
+
+        @include mq(lg) {
+            &:hover:before {
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#{$color-primary}" d="M19.4 21.7c-2.9-2.9-2.9-7.6 0-10.5l9-9c2.9-2.9 7.6-2.9 10.5 0l41.8 42.5c2.9 2.9 2.9 7.7 0 10.6L38.9 97.8c-2.9 2.9-7.6 2.9-10.5 0l-9-9c-2.9-2.9-2.9-7.6 0-10.5l23.1-23.1c2.9-2.9 2.9-7.6 0-10.5l-23.1-23z"></path></svg>');
+                transform: scale(1.4) rotate(180deg);
+            }
+        }
+
         &:before {
             display: block;
             transform: rotate(180deg);
@@ -50,7 +58,9 @@
             width: 25px;
             height: 25px;
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#{$color-secondary}" d="M19.4 21.7c-2.9-2.9-2.9-7.6 0-10.5l9-9c2.9-2.9 7.6-2.9 10.5 0l41.8 42.5c2.9 2.9 2.9 7.7 0 10.6L38.9 97.8c-2.9 2.9-7.6 2.9-10.5 0l-9-9c-2.9-2.9-2.9-7.6 0-10.5l23.1-23.1c2.9-2.9 2.9-7.6 0-10.5l-23.1-23z"></path></svg>');
+            transition: all $transition-fast ease-in-out;
         }
+
     }
 
     .slick-next {
@@ -62,12 +72,22 @@
             right: -50px;
         }
 
+        @include mq(lg) {
+            &:hover:before {
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#{$color-primary}" d="M19.4 21.7c-2.9-2.9-2.9-7.6 0-10.5l9-9c2.9-2.9 7.6-2.9 10.5 0l41.8 42.5c2.9 2.9 2.9 7.7 0 10.6L38.9 97.8c-2.9 2.9-7.6 2.9-10.5 0l-9-9c-2.9-2.9-2.9-7.6 0-10.5l23.1-23.1c2.9-2.9 2.9-7.6 0-10.5l-23.1-23z"></path></svg>');
+                transform: scale(1.4);
+            }
+        }
+
+
         &:before {
             display: block;
             content: '';
             width: 25px;
             height: 25px;
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#{$color-secondary}" d="M19.4 21.7c-2.9-2.9-2.9-7.6 0-10.5l9-9c2.9-2.9 7.6-2.9 10.5 0l41.8 42.5c2.9 2.9 2.9 7.7 0 10.6L38.9 97.8c-2.9 2.9-7.6 2.9-10.5 0l-9-9c-2.9-2.9-2.9-7.6 0-10.5l23.1-23.1c2.9-2.9 2.9-7.6 0-10.5l-23.1-23z"></path></svg>');
+            transition: all $transition-fast ease-in-out;
+
         }
     }
 

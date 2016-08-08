@@ -81,6 +81,10 @@ Parsley.setLocale('fr');
     });
 
 
+$('[gr-nav]').click(function() {
+    $('.header__nav').toggleClass('is-opened');
+});
+
 
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
@@ -149,39 +153,6 @@ Parsley.setLocale('fr');
             midClick: true
         });
     });
-
-    function showMarkers() {
-        $(markers).each(function(id, marker){
-            marker.setVisible(true);
-        });
-    }
-    function initialize() {
-        var latlng = new google.maps.LatLng(39.64805882001975, -87.70713525390624);
-        var myOptions = {
-            zoom: 4,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false
-        };
-        map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
-        $(addresses).each(function(index, marker){
-            markers[index] = new google.maps.Marker({
-                position: {lat:marker.address.lat, lng : marker.address.lng },
-                map: map,
-                icon: {url: marker.icon, size: new google.maps.Size(44,44)}
-            });
-        });
-
-        google.maps.event.addListener(map, 'zoom_changed', function() {
-            showMarkers();
-        });
-        google.maps.event.addListener(map, 'idle', function() {
-            showMarkers();
-        });
-    }
-    if(typeof google !== 'undefined') {
-        google.maps.event.addDomListener(window, "load", initialize);
-    }
 
 
 }(require('jquery'), window, document));

@@ -17,6 +17,65 @@
 @import 'layouts/layouts';
 
 
+.background__header {
+    background-image: url('/dist/img/background-header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: $color-white;
+
+    a {
+        color: currentColor;
+    }
+
+
+    .header__logo {
+        display: block;
+        margin-top: 3em;
+        text-align: center;
+
+        img {
+            display: inline-block;;
+        }
+    }
+
+    .header__mobile-wrapper {
+        background: rgba(0, 0, 0, .7);
+        margin-left: -$grid-gutter-width /2;
+        margin-right: -$grid-gutter-width /2;
+        padding: 1em;
+    }
+
+    .header__nav {
+        background: rgba(0, 0, 0, .7);
+        list-style: none;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        font-family: 'Oswald';
+        font-size: em(20px);
+        text-transform: uppercase;
+        transition: all $transition-fast ease-in-out;
+
+        &.is-opened {
+            max-height: 500px;
+            padding: $root-vgrid 0;
+        }
+
+        li {
+            display: block;
+        }
+    }
+
+    svg rect {
+        fill: $color-white;
+    }
+}
+
 .section__nos-services {
     img {
         width: 100%;
@@ -30,19 +89,26 @@
     [gr-grid="block"] {
         position: relative;
         padding: .2em;
+        padding-bottom: 0;
     }
 
     .services__title {
         display: block;
         max-width: 270px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
         color: color(brand, white);
-        font-weight: bold;
         text-transform: uppercase;
-        line-height: 1;
+        line-height: 1.2;
         font-size: em(20px);
+        letter-spacing: 1px;
         position: absolute;
         bottom: .6em;
         left: .6em;
+
+        @include mq(sm) {
+            font-size: em(25px);
+        }
     }
 }
 
@@ -51,12 +117,22 @@
 .section__accreditations {
     @at-root .background__accreditations {
         background-color: #e7e7e7;
+        background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQALPnz//zwjjgziSkpKMYAEYB8RmROaABAANdg+5cgJtTwAAAABJRU5ErkJggg==) repeat;
+    }
+
+    .site-section-title {
+        margin-bottom: $root-vgrid*2;
+    }
+
+    @include mq(sm) {
+        img + img {
+            margin-left: 4em;
+        }
     }
 
 }
 
 .section__ecrivez-nous {
-
 
     padding-top: 1em;
 
@@ -73,28 +149,78 @@
 
         li {
             margin-bottom: 2em;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                flex-direction: row;
+
+                @include mq(sm) {
+
+                }
+
+                @include mq(md) {
+                  flex-direction: row;
+                }
+
+                i {
+                    font-style: normal;
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 80px;
+                    height: 80px;
+                    flex-basis: 80px;
+                    line-height: 80px;
+                    background-color: $color-white;
+                    color: $color-black;
+                    text-align: center;
+                    font-size: em(30px);
+                    margin-right: .5em;
+
+                    @include mq(sm) {
+                        max-width: 40px;
+                        height: 40px;
+                        flex-basis: 40px;
+                        line-height: 40px;
+                    }
+
+                    @include mq(md) {
+                        max-width: 80px;
+                        height: 80px;
+                        flex-basis: 80px;
+                        line-height: 80px;
+                    }
+                }
+
+                span,
+                a {
+                    font-family: 'Oswald';
+                    font-weight: 300;
+                    font-size: remy(20px);
+                    color: $color-white;
+                    letter-spacing: 1px;
+                    flex: 1;
+                    padding-top: .5em;
+
+                    @include mq(sm) {
+                      padding-top: 0;
+                    }
+
+                    @include mq(md) {
+                        align-self: center;
+                    }
+                }
+            }
         }
 
-        i {
-            font-style: normal;
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            background-color: $color-white;
-            color: $color-black;
-            text-align: center;
-            line-height: 80px;
-            font-size: em(30px);
-            margin-right: .5em;
-        }
 
-        a {
-            color: $color-white;
-        }
     }
 
     @at-root .background__ecrivez-nous {
         background-color: #581316;
+        background-image: url('/dist/img/background-footer.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -112,7 +238,27 @@
     }
 }
 
+.background__footer {
+    background-image: url('/dist/img/background-footer-2.jpg');
+    background-position: center;
+}
 
 .section__footer {
-    padding-bottom: 0;
+    padding: $root-vgrid/2;
+    color: $color-white;
+
+    [gr-grid="row"] {
+        align-items: center;
+        font-size: em(12px);
+
+        > * {
+            padding: .5em;
+        }
+    }
+
+    [gr-grid="sm-1"]:nth-child(2) {
+        @include mq(sm) {
+            text-align: right
+        }
+    }
 }

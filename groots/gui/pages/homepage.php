@@ -1,53 +1,52 @@
-<section class="section__header">
-    <div class="header__mobile-wrapper">
-        <div gr-grid="column">
-            <a href="/" class="header__logo">
-                logo
-            </a>
-        </div>
-        <svg gr-grid="column" data-js-hamburger xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="53.375px" height="33.125px" viewBox="0 0 53.375 33.125" enable-background="new 0 0 53.375 33.125" xml:space="preserve">
-            <g id="top">
-                <rect x="5.5" y="4.625" fill="#000" width="43" height="4"></rect>
-            </g>
-            <g id="middle">
-                <rect x="5.5" y="14.625" fill="#000" width="43" height="4"></rect>
-            </g>
-            <g id="bottom">
-                <rect x="5.5" y="24.625" fill="#000" width="43" height="4"></rect>
-            </g>
-        </svg>
+<div class="background__header">
+    <section class="section__header">
+        <div class="header__mobile-wrapper">
+            <div gr-grid="column">
 
-    </div>
-    <div gr-grid="row">
-        <div gr-grid="column">
-            <ul>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#realisations">Réalisations</a>
-                </li>
-                <li>
-                    <a href="#accreditations">Accréditations</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div gr-grid="column">
-            <ul>
-                <li>
-                    <a href="#">514-677-0691</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div>
+            </div>
+            <svg gr-nav gr-grid="column" data-js-hamburger xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="53.375px" height="33.125px" viewBox="0 0 53.375 33.125" enable-background="new 0 0 53.375 33.125" xml:space="preserve">
+                <g id="top">
+                    <rect x="5.5" y="4.625" fill="#000" width="43" height="4"></rect>
+                </g>
+                <g id="middle">
+                    <rect x="5.5" y="14.625" fill="#000" width="43" height="4"></rect>
+                </g>
+                <g id="bottom">
+                    <rect x="5.5" y="24.625" fill="#000" width="43" height="4"></rect>
+                </g>
+            </svg>
 
-</section>
+        </div>
+        <div class="header__nav is-opened" gr-grid="row">
+            <div gr-grid="md-1">
+                <ul class="header__primary-nav">
+                    <li>
+                        <a href="#services">Mission</a>
+                    </li>
+                    <li>
+                        <a href="#realisations">Clients</a>
+                    </li>
+                    <li>
+                        <a href="#accreditations">Carrières</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div gr-grid="md-1">
+                <ul class="header__secondary-nav">
+                    <li>
+                        <a href="tel:514-677-0691">514-677-0691</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="/" class="header__logo">
+            <img src="/dist/img/logo.png">
+        </a>
+    </section>
+</div>
 
 <section class="section__punch-line">
     <div gr-grid="row">
@@ -59,7 +58,14 @@
     </div>
     <div gr-grid="row">
         <div gr-grid="sm-8">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio veritatis fugiat nam, tenetur ex reiciendis in rem, cumque sed amet incidunt, nobis illo repudiandae culpa provident. Ab dolor, accusantium cumque.
+            <div class="typography">
+                <p>
+                    GGB MAÇONNERIE REPOSE SUR L'EXPÉRIENCE D'UN ENTREPRENEUR ISSUS D'UNE FAMILLE DE MAÇON.
+                </p>
+                <p>
+                    Nous œuvrons dans la restauration de brique et Pierre ainsi que dans la construction neuve. Munis d'une équipe de maçons professionnels et passionnée, nous assurons un travail de haute qualité dans les règle de l'art . Que ce soit dans les secteurs résidentiel, commercial ou institutionnel, nous seront à la hauteur de vos exigences!
+                </p>
+            </div>
         </div>
         <div gr-grid="sm-4">
             <div class="button-container button-container--right">
@@ -72,7 +78,7 @@
 <section class="section__nos-services">
     <div gr-grid="row">
         <div gr-grid="column">
-            <a name="nos-services"></a>
+            <a name="services"></a>
             <h1 class="site-section-title">
                 Nos services
             </h1>
@@ -80,57 +86,57 @@
     </div>
     <div gr-grid="row--block sm-2 md-3">
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/construction-et-renovations.jpg">
             <span class="services__title">
                 Construction et rénovations
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/pose-de-brique.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Pose de brique
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/pierre-naturelle.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Pierre naturelle
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/bloc.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Bloc
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/foyer.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Foyer
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/cheminee.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Cheminée
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/crepie.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Crépie
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/renovation-de-maconnerie.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Rénovation de maçonnerie
             </span>
         </div>
         <div gr-grid="block">
-            <img src="http://placehold.it/395x245">
+            <img src="/dist/img/services/brique-et-pierre-collee.jpg">
             <span class="services__title">
-                Construction et rénovations
+                Brique et pierre collée
             </span>
         </div>
     </div>
@@ -148,52 +154,47 @@
     <div class="slider-realisations">
         <div js-realisations>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0001_Group 1.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0000_Group 2.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0002_IMG_2586.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0003_IMG_1082.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0004_IMG_1059.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0005_IMG_0925.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0006_IMG_0535.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
             <div>
-                <img src="http://placehold.it/1200x675">
-                <span class="slider-title">lorem ipsum</span>
-            </div>
-            <div>
-                <img src="http://placehold.it/1200x675">
+                <img src="/dist/img/gallerie/GaleriePhoto_GGB_0007_IMG_0145.jpg">
                 <span class="slider-title">lorem ipsum</span>
             </div>
         </div>
         <div js-realisations-thumbs>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
-            <div><img src="http://placehold.it/1200x675"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0001_Group 1.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0000_Group 2.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0002_IMG_2586.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0003_IMG_1082.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0004_IMG_1059.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0005_IMG_0925.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0006_IMG_0535.jpg"></div>
+            <div><img src="/dist/img/gallerie/thumbs/GaleriePhoto_GGB_0007_IMG_0145.jpg"></div>
         </div>
     </div>
 </section>
@@ -208,8 +209,8 @@
                 </h1>
 
                 <div class="accreditations__container">
-                    <img src="http://placehold.it/200x80">
-                    <img src="http://placehold.it/200x80">
+                    <img src="/dist/img/logo-apchq.png">
+                    <img src="/dist/img/logo-rbq.png">
                 </div>
             </div>
         </div>
@@ -225,7 +226,7 @@
                 </h2>
                 <ul class="icon-list">
                     <li>
-                        <a href="#">
+                        <a href="tel:514-677-0691">
                             <i class="fa fa-phone"></i>
                             <span>514-677-0691</span>
                         </a>
@@ -233,19 +234,19 @@
                     <li>
                         <a href="#">
                             <i class="fa fa-mobile"></i>
-                            <span>514-***-***</span>
+                            <span>514-677-0692</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="mailto::info@ggbmaconnerie.com">
                             <i class="fa fa-envelope"></i>
-                            <span>john@doe.com</span>
+                            <span>info@ggbmaconnerie.com </span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa fa-map-marker"></i>
-                            <span>2425 cantin, TODO</span>
+                            <span>1285 rue des Hirondelles Saint-Basile-le-Grand Québec  J4F 5H7</span>
                         </a>
                     </li>
                 </ul>
@@ -302,13 +303,15 @@
         </div>
     </section>
 </div>
-
-<footer class="section__footer">
-    <div gr-grid="row">
-        <div gr-grid="sm-1">
-            1
-        </div>
-        <div gr-grid="sm-1">
-            1
+<div class="background__footer">
+    <footer class="section__footer">
+        <div gr-grid="row">
+            <div gr-grid="sm-2">
+                © GGB MAÇONNERIE INC  |  Tous droits réservés 2016. Design par Audrey Jacques Designer, Intégration Christian Ross
+            </div>
+            <div gr-grid="sm-1">
+                Numéro R.B.Q.: 5647-5163-01
+            </div>
         </div>
     </footer>
+</div>

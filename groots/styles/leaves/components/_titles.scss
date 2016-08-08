@@ -3,6 +3,12 @@
     font-weight: bold;
     margin: .8em 0 .9em;
     color: color(brand, primary);
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+
+    @media screen and (max-width: 640px) {
+        font-size: em(25px);
+    }
 }
 
 .site-title {
@@ -18,6 +24,15 @@
 .site-section-title {
     @extend %h-h2;
     margin: .8em 0 .9em;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     color: color(brand, secondary);
+
+    @media screen and (max-width: 640px) {
+        font-size: em(25px);
+    }
+}
+
+
+* {
 }
