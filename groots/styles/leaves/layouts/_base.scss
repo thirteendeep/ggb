@@ -16,3 +16,18 @@ body {
 [class^='section-fluid'] {
     @extend %container-fluid;
 }
+
+
+.section__punch-line {
+    .button-container {
+
+        @include mq(sm) {
+          margin-top: $root-vgrid*1.5;
+        }
+    }
+}
+
+
+[js-realisations-thumbs] {
+    cursor: pointer;
+}

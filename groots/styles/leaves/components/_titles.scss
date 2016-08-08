@@ -5,6 +5,7 @@
     color: color(brand, primary);
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+    line-height: 1.4;
 
     @media screen and (max-width: 640px) {
         font-size: em(25px);

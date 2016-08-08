@@ -1,9 +1,9 @@
 <div class="background__header">
+    <div class="header__bg-nav">
+
+    </div>
     <section class="section__header">
         <div class="header__mobile-wrapper">
-            <div gr-grid="column">
-
-            </div>
             <svg gr-nav gr-grid="column" data-js-hamburger xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="53.375px" height="33.125px" viewBox="0 0 53.375 33.125" enable-background="new 0 0 53.375 33.125" xml:space="preserve">
                 <g id="top">
                     <rect x="5.5" y="4.625" fill="#000" width="43" height="4"></rect>
@@ -15,34 +15,36 @@
                     <rect x="5.5" y="24.625" fill="#000" width="43" height="4"></rect>
                 </g>
             </svg>
+            <a href="#" class="header__tel">514-667-0691</a>
+        </div>
+        <div class="header__nav" gr-grid="row">
+            <ul class="header__primary-nav">
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#realisations">Réalisations</a>
+                </li>
+                <li>
+                    <a href="#accreditations">Accréditations</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
+            </ul>
+            <ul class="header__secondary-nav">
+                <li>
+                    <a href="tel:514-677-0691">514-677-0691</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="header__nav is-opened" gr-grid="row">
-            <div gr-grid="md-1">
-                <ul class="header__primary-nav">
-                    <li>
-                        <a href="#services">Mission</a>
-                    </li>
-                    <li>
-                        <a href="#realisations">Clients</a>
-                    </li>
-                    <li>
-                        <a href="#accreditations">Carrières</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div gr-grid="md-1">
-                <ul class="header__secondary-nav">
-                    <li>
-                        <a href="tel:514-677-0691">514-677-0691</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <a href="/" class="header__logo">
+        <a href="#top" class="header__logo">
             <img src="/dist/img/logo.png">
         </a>
     </section>
@@ -50,24 +52,17 @@
 
 <section class="section__punch-line">
     <div gr-grid="row">
-        <div gr-grid="column">
+        <div gr-grid="sm-10">
             <h1 class="site-title">
-                Punch line
+                GGB MAÇONNERIE REPOSE SUR L'EXPÉRIENCE D'UN ENTREPRENEUR ISSUS D'UNE FAMILLE DE MAÇON.
             </h1>
-        </div>
-    </div>
-    <div gr-grid="row">
-        <div gr-grid="sm-8">
             <div class="typography">
-                <p>
-                    GGB MAÇONNERIE REPOSE SUR L'EXPÉRIENCE D'UN ENTREPRENEUR ISSUS D'UNE FAMILLE DE MAÇON.
-                </p>
                 <p>
                     Nous œuvrons dans la restauration de brique et Pierre ainsi que dans la construction neuve. Munis d'une équipe de maçons professionnels et passionnée, nous assurons un travail de haute qualité dans les règle de l'art . Que ce soit dans les secteurs résidentiel, commercial ou institutionnel, nous seront à la hauteur de vos exigences!
                 </p>
             </div>
         </div>
-        <div gr-grid="sm-4">
+        <div gr-grid="sm-2">
             <div class="button-container button-container--right">
                 <a href="#contact" class="btn btn--primary">Contactez-nous</a>
             </div>

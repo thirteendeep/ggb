@@ -62,9 +62,7 @@
     </style>
 </head>
 <body>
-    <?php include 'includes/gui-nav.php' ?>
     <div class="site-container">
-
         <?php
         if (strpos($_GET['page'], '..') == false) {
             include('pages/'.$_GET['page']);
