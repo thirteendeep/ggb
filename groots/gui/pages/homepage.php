@@ -227,7 +227,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="tel:514-677-0692">
                             <i class="fa fa-mobile"></i>
                             <span>514-677-0692</span>
                         </a>
@@ -251,44 +251,48 @@
                     Écrivez-nous
                 </h2>
                 <a name="contact"></a>
-                <form action="" class="form" data-parsley-validate novalidate gr-form>
+                <form action="/mailer.php" class="form" data-parsley-validate novalidate gr-form>
                     <div gr-grid="row">
                         <div gr-grid="sm-6">
                             <div class="form-item">
-                                <label for="exampleInputTextl">Prénom *</label>
-                                <input type="text" id="exampleInputTextl" required>
+                                <label for="txt_prenom">Prénom *</label>
+                                <input type="text" name="txt_prenom" required>
                             </div>
                         </div>
                         <div gr-grid="sm-6">
                             <div class="form-item">
-                                <label for="exampleInputTextl">Nom *</label>
-                                <input type="text" id="exampleInputTextl" required>
+                                <label for="txt_nom">Nom *</label>
+                                <input type="text" name="txt_nom" required>
                             </div>
                         </div>
                     </div>
                     <div gr-grid="row">
                         <div gr-grid="sm-6">
                             <div class="form-item">
-                                <label for="exampleInputTextl">Téléphone</label>
-                                <input type="text" id="exampleInputTextl">
+                                <label for="txt_phone">Téléphone</label>
+                                <input type="text" name="txt_phone">
                             </div>
                         </div>
                         <div gr-grid="sm-6">
                             <div class="form-item">
-                                <label for="exampleInputTextl">Courriel *</label>
-                                <input type="mail" id="exampleInputTextl" required>
+                                <label for="txt_mail">Courriel *</label>
+                                <input type="mail" name="txt_mail" required>
                             </div>
                         </div>
                     </div>
                     <div gr-grid="row">
                         <div gr-grid="column">
                             <div class="form-item">
-                                <label for="exampleInputPassword">Votre message *</label>
-                                <textarea required></textarea>
+                                <label for="txt_message">Votre message *</label>
+                                <textarea required name="txt_message"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="button-container button-container--right">
+                        <div class="message-confirm">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            Votre message a bien été transmis. Nous vous contacterons bientôt.
+                        </div>
                         <button type="submit" class="btn btn--primary">
                             soumettre
                         </button>
@@ -310,3 +314,25 @@
         </div>
     </footer>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+    var form = $('[gr-form]');
+
+    $(form).submit(function(event) {
+        event.preventDefault();
+        var formData = $(form).serialize();
+        console.log(formData);
+
+        $.ajax({
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData
+        }).done(function(response) {
+            $('#name').val('');
+            $('#email').val('');
+            $('#message').val('');
+        });
+    });
+});
+</script>

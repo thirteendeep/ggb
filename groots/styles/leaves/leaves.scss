@@ -22,7 +22,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     color: $color-white;
 
     a {
@@ -86,9 +85,12 @@
         }
 
         &.is-opened {
-            max-height: 500px;
+            max-height: 100vh;
             padding: $root-vgrid 0;
 
+            @include mq(md) {
+                padding: 0;
+            }
 
         }
 
@@ -414,5 +416,14 @@
                 transform: rotate(-45deg);
             }
         }
+    }
+}
+
+.message-confirm {
+    color: $white;
+    padding-bottom: 1em;
+
+    i {
+        padding-right: .25em;
     }
 }
