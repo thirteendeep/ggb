@@ -251,18 +251,18 @@
                     Écrivez-nous
                 </h2>
                 <a name="contact"></a>
-                <form action="/mailer.php" class="form" data-parsley-validate novalidate gr-form>
+                <form action="/mailer.php" class="form" method="POST" data-parsley-validate novalidate gr-form>
                     <div gr-grid="row">
                         <div gr-grid="sm-6">
                             <div class="form-item">
                                 <label for="txt_prenom">Prénom *</label>
-                                <input type="text" name="txt_prenom" required>
+                                <input type="text" name="txt_prenom" id="txt_prenom" required>
                             </div>
                         </div>
                         <div gr-grid="sm-6">
                             <div class="form-item">
                                 <label for="txt_nom">Nom *</label>
-                                <input type="text" name="txt_nom" required>
+                                <input type="text" name="txt_nom" id="txt_nom" required>
                             </div>
                         </div>
                     </div>
@@ -270,13 +270,13 @@
                         <div gr-grid="sm-6">
                             <div class="form-item">
                                 <label for="txt_phone">Téléphone</label>
-                                <input type="text" name="txt_phone">
+                                <input type="text" name="txt_phone" id="txt_phone">
                             </div>
                         </div>
                         <div gr-grid="sm-6">
                             <div class="form-item">
                                 <label for="txt_mail">Courriel *</label>
-                                <input type="mail" name="txt_mail" required>
+                                <input type="mail" name="txt_mail" id="txt_mail" required>
                             </div>
                         </div>
                     </div>
@@ -284,7 +284,7 @@
                         <div gr-grid="column">
                             <div class="form-item">
                                 <label for="txt_message">Votre message *</label>
-                                <textarea required name="txt_message"></textarea>
+                                <textarea required name="txt_message" id="txt_message"></textarea>
                             </div>
                         </div>
                     </div>
@@ -322,16 +322,14 @@ $(function() {
     $(form).submit(function(event) {
         event.preventDefault();
         var formData = $(form).serialize();
-        console.log(formData);
 
         $.ajax({
             type: 'POST',
             url: $(form).attr('action'),
             data: formData
         }).done(function(response) {
-            $('#name').val('');
-            $('#email').val('');
-            $('#message').val('');
+            $('[id*="txt_"]').val('');
+            $('.message-confirm').fadeIn();
         });
     });
 });

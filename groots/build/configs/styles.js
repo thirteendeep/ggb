@@ -9,7 +9,7 @@ module.exports = () => {
 
     var settings = {
         maps: true,
-        autoprefixer: ['last 2 versions'],
+        autoprefixer: ['last 4 versions'],
         lint: true,
         lintIgnore: [
             '!' + paths.src.styles + 'variables.scss',

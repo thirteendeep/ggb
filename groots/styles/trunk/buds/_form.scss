@@ -367,7 +367,7 @@
             margin-bottom: 1em;
 
             label {
-                flex: 1 1 100%;
+                display: block;
                 color: $color-white;
                 margin-bottom: .4em;
             }
@@ -449,7 +449,7 @@
         height: $form-element-height;
         line-height: $form-element-height;
         background-color: $form-element-background-color;
-        flex: 1 0 100%;
+        display: block;
         padding: 0 $root-padding;
 
 

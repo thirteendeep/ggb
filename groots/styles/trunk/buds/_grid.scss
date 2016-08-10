@@ -22,7 +22,11 @@
 
 %row {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
 
     @if($grid-gutter-width != 0) {
         margin-left: -$grid-gutter-width/2;
@@ -36,6 +40,7 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
+    -webkit-flex-basis: 100%;
 
     @if($grid-gutter-width != 0) {
         padding-left: $grid-gutter-width/2;
@@ -55,7 +60,12 @@
 %row-block {
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
 
     @if($grid-gutter-width != 0) {
         margin-left: -$grid-gutter-width/2;
@@ -66,6 +76,7 @@
 %block {
     flex: 1 1 auto;
     flex-basis: 100%;
+    -webkit-flex-basis: 100%;
     max-width: 100%;
 
     @if($grid-gutter-width != 0) {
@@ -159,6 +170,7 @@
 
                     [#{$attribute}=block] {
                         flex-basis: 100% / $i;
+                        -webkit-flex-basis: 100% / $i;
                         max-width: 100% / $i;
                     }
                 }

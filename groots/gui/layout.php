@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>groots | globalia framework</title>
+    <title>GGB Maconnerie</title>
 
     <meta name="description" content="">
     <meta name="author" content="" />
@@ -17,40 +17,21 @@
     <script src="https://use.fontawesome.com/ef899b4237.js"></script>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/dist/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/dist/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/dist/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/dist/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/dist/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/dist/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/dist/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/dist/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/dist/favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/dist/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/dist/favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/dist/favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/dist/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/dist/favicons/manifest.json">
-    <link rel="mask-icon" href="/dist/favicons/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/dist/favicons/mstile-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/dist/img/fav/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/dist/img/fav/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/dist/img/fav/manifest.json">
+    <link rel="mask-icon" href="/dist/img/fav/safari-pinned-tab.svg" color="#000000">
     <meta name="theme-color" content="#ffffff">
-
     <!--Open Graph-->
     <meta property="og:locale" content="" />
     <meta property="og:type" content="" />
-    <meta property="og:title" content="" />
+    <meta property="og:title" content="GGB Maconnerie" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="http://ggbmaconnerie.com/GGB_facebookShare_v1.jpg" />
 
-    <!--Twitter-->
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="" />
 
     <style>
     .gui-nav[gr-nav-sticky='always'] {
