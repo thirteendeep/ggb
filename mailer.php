@@ -16,10 +16,10 @@
             exit;
         }
 
-        $recipient = "thirteendeep@gmail.com, audreyjacques@me.com";
+        $recipient = "info@ggbmaconnerie.com, audreyjacquesdesigner@gmail.com";
         $subject = "Demande d'information - web";
 
-        $email_content = "Demande d'information de : $prenom $nom \nTéléphone: $phone\nCourriel: $email \n\n Message:\n$message";
+        $email_content = "Demande d'information de : $prenom $nom \nTéléphone: $phone\nCourriel: $email \n\nMessage:\n$message";
 
         $email_headers = "From: $name <$email>";
 

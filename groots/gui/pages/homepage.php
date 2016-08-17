@@ -37,7 +37,7 @@
                 <li>
                     <a href="tel:514-677-0691">514-677-0691</a>
                 </li>
-                <li>
+                <li style="display:none;">
                     <a href="#">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
@@ -45,7 +45,7 @@
             </ul>
         </div>
         <a href="#top" class="header__logo">
-            <img src="/dist/img/logo.png">
+            <img src="/dist/img/logo_white.svg">
         </a>
     </section>
 </div>
@@ -233,15 +233,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto::info@ggbmaconnerie.com">
+                        <a href="mailto:info@ggbmaconnerie.com">
                             <i class="fa fa-envelope"></i>
                             <span>info@ggbmaconnerie.com </span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.google.ca/maps/dir/''/97+Rue+des+Fauvettes,+Saint-Basile-le-Grand,+QC+J3N+1L1/@45.5122247,-73.285879,18z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x4cc900ab46a41ea5:0xf389e79f5c840472!2m2!1d-73.2829098!2d45.5126796" target="_blank">
                             <i class="fa fa-map-marker"></i>
-                            <span>1285 rue des Hirondelles Saint-Basile-le-Grand Québec  J4F 5H7</span>
+                            <span>97 rue des Fauvettes, <br>Saint-Basile-le-Grand  J3N 1L1</span>
                         </a>
                     </li>
                 </ul>
@@ -276,7 +276,7 @@
                         <div gr-grid="sm-6">
                             <div class="form-item">
                                 <label for="txt_mail">Courriel *</label>
-                                <input type="mail" name="txt_mail" id="txt_mail" required>
+                                <input type="email" name="txt_mail" id="txt_mail" required>
                             </div>
                         </div>
                     </div>
